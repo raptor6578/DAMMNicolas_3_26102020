@@ -5,7 +5,7 @@
     <meta name="description" content="Découvrez des restaurants d'exception, sélectionnés par nos soins" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <link rel="icon" href="images/logo/ohmyfood.png" />
+    <link rel="icon" href="" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
 </head>
@@ -13,32 +13,88 @@
 <header>
     <img src="images/logo/ohmyfood.png" alt="logo" id="header-logo" />
 </header>
-<div id="explore-food">
-    <div id="explore-food-title">
+<section class="explore-food">
+    <div class="explore-food-title">
         <i class="fas fa-map-marker-alt fa-xs"></i> Paris, Belleville
     </div>
-    <div id="explore-food-content">
+    <div class="explore-food-content">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="button-1">Explorer nos restaurants</button>
+        <button class="button-1 shadow-1">Explorer nos restaurants</button>
     </div>
-    <div id="operation">
-        <h2>Fonctionnement</h2>
-        <a href="#">
-            <span class="number">1</span>
-            <i class="fas fa-mobile-alt fa-1x"></i>
-            Choisissez un restaurant
-        </a>
-        <a href="#">
-            <span class="number">2</span>
-            <i class="fas fa-list-ul fa-1x"></i>
-            Composez votre menu
-        </a>
-        <a href="#"><span class="number">3</span>
-            <i class="fas fa-store fa-1x"></i>
-            Dégustez au restaurant
-        </a>
+</section>
+<section class="operation">
+    <h2>Fonctionnement</h2>
+    <a class="shadow-1" href="#">
+        <span class="number">1</span>
+        <i class="fas fa-mobile-alt fa-1x"></i>
+        Choisissez un restaurant
+    </a>
+    <a class="shadow-1" href="#">
+        <span class="number">2</span>
+        <i class="fas fa-list-ul fa-1x"></i>
+        Composez votre menu
+    </a>
+    <a class="shadow-1" href="#"><span class="number">3</span>
+        <i class="fas fa-store fa-1x"></i>
+        Dégustez au restaurant
+    </a>
+</section>
+<section class="food">
+    <h2>Restaurants</h2>
+    <div class="food-item">
+        <div class="food-item-img food-img1">
+            <span class="news">Nouveau</span>
+        </div>
+        <div class="food-item-content">
+            <p><b>La palette du goût</b>
+                Ménilmontant</p>
+            <div class="food-item-like">
+                <i class="fas fa-heart fa-lg"></i>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="food-item">
+        <div class="food-item-img food-img2">
+            <span class="news">Nouveau</span>
+        </div>
+        <div class="food-item-content">
+            <p><b>La note enchantée</b>
+                Charonne</p>
+            <div class="food-item-like">
+                <i class="fas fa-heart fa-lg"></i>
+            </div>
+        </div>
+    </div>
+    <div class="food-item">
+        <div class="food-item-img food-img3"></div>
+        <div class="food-item-content">
+            <p><b>À la française</b>
+                Cité rouge</p>
+            <div class="food-item-like">
+                <i class="fas fa-heart fa-lg"></i>
+            </div>
+        </div>
+    </div>
+    <div class="food-item">
+        <div class="food-item-img food-img4"></div>
+        <div class="food-item-content">
+            <p><b>Les délice des sens</b>
+                Folie-Méricourt</p>
+            <div class="food-item-like">
+                <i class="fas fa-heart fa-lg"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+<ul>
+    <li id="footer-logo">ohmyfood</li>
+    <li><a href="#"><i class="fas fa-utensils fa-xs"></i> Proposer un restaurant</a></li>
+    <li><a href="#"><i class="fas fa-hands-helping fa-xs"></i> Devenir partenaire</li>
+    <li><a href="#">Mentions légales</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</footer>
 </body>
 </html>
