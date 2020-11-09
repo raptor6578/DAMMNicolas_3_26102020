@@ -6,20 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <link rel="icon" href="" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
 </head>
 <body>
-<header>
-    <i class="fas fa-arrow-left"></i>
-    <img src="images/logo/ohmyfood.png" alt="logo" id="header-logo" />
-    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" id="header-image" alt="image header" />
+<header class="header">
+    <i class="header__back fas fa-arrow-left"></i>
+    <img src="images/logo/ohmyfood.png" alt="logo" class="header__logo" />
+    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="header__image" alt="image header" />
 </header>
 <div class="main-container">
-    <div class="main-container-title">
+    <section class="main-container__title">
         <h1>La palette du goût </h1>
-        <i class="far fa-heart"></i>
-    </div>
+        <i class="far fa-heart fa-lg"></i>
+    </section>
+    <section class="entree">
+        <h2>ENTREES</h2>
+        <div class="main-container__underline"></div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au pimet d'espelette</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">25€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Foie gras de canard mi-cuit</h3>
+                <p>Et ses copeaux de truffe noire</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-info__price__value">35€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Oeuf au plat</h3>
+                <p>Assaisonné à la truffe sur lit de caviar</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">20€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="plat">
+        <h2>PLATS</h2>
+        <div class="main-container__underline"></div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Filet de boeuf aux herbes</h3>
+                <p>Accompagné de sa ribambelle de légumes</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">40€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Parmentier de queue de boeuf</h3>
+                <p>A la truffe noire sur sa purée de panais</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">35€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Filet de Turbot</h3>
+                <p>Aux agrumes</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">44€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dessert">
+        <h2>DESSERTS</h2>
+        <div class="main-container__underline"></div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Paris-Brest</h3>
+                <p>Revisité</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">18€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Macaron au chocolat d'exception</h3>
+                <p>Et glace à la vanille de Madagascar</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">22€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-item shadow-1">
+            <div class="order-item__info">
+                <h3>Mousse au chocolat</h3>
+                <p>Au piment d'espelette et à la truffe noire</p>
+            </div>
+            <div class="order-item__price">
+                <span class="order-item__price__value">23€</span>
+                <div class="order-item__animation">
+                    <i class="fas fa-check-circle fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="order"></div>
 </div>
+<footer class="footer">
+    <ul>
+        <li class="footer__logo">ohmyfood</li>
+        <li><a href="#"><i class="fas fa-utensils fa-xs"></i> Proposer un restaurant</a></li>
+        <li><a href="#"><i class="fas fa-hands-helping fa-xs"></i> Devenir partenaire</li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+    </ul>
+</footer>
 </body>
 </html>
