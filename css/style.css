@@ -9,6 +9,29 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  right: 0;
+  animation: spinner-hidden 0s ease-in 3s forwards;
+  display: flex;
+  align-items: center;
+}
+.spinner__content {
+  margin: auto;
+  text-align: center;
+  color: #9356DC;
+  font-size: 30px;
+}
+
+@keyframes spinner-hidden {
+  to {
+    visibility: hidden;
+  }
+}
 .header {
   display: flex;
   flex-wrap: wrap;
