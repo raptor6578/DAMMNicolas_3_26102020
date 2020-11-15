@@ -19,14 +19,30 @@ body
   background-color: white
   z-index: 1
   right: 0
-  animation: spinner-hidden 0s ease-in 3s forwards
+  animation: spinner-hidden 0s ease-in 1s forwards
   display: flex
   align-items: center
   &__content
     margin: auto
     text-align: center
     color: $color_primary
-    font-size: 30px
+    font-size: 25px
+    font-family: 'Shrikhand', cursive
+    .loader
+      margin: auto
+      margin-bottom: 30px
+      border: 16px solid $color_primary
+      border-top: 16px solid $color_secondary
+      border-radius: 50%
+      width: 120px
+      height: 120px
+      animation: spinner 1s linear infinite
+
+@keyframes spinner
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 
 @keyframes spinner-hidden
   to
@@ -35,6 +51,8 @@ body
 .header
   display: flex
   flex-wrap: wrap
+  a
+    color: black
   &__back
     position: absolute
     left: 20px
@@ -54,6 +72,7 @@ body
   border-top-left-radius: 50px
   border-top-right-radius: 50px
   bottom: 60px
+  margin-bottom: -60px
   padding: 20px
   &__title
     display: flex
@@ -74,18 +93,25 @@ body
     font-weight: normal
     color: gray
 
-.entree, .plat, .dessert
+.entree, .plat, .dessert, .validate-order
   animation-duration: 4s
   animation-name: fadein
   animation-fill-mode: backwards
 
 .entree
-  margin-top: 20px
+  margin-top: 40px
 
 .plat
+  margin-top: 40px
   animation-delay: 1s
 
 .dessert
+  margin-top: 40px
+  animation-delay: 2s
+
+.validate-order
+  text-align: center
+  margin: 40px
   animation-delay: 2s
 
 @keyframes fadein
@@ -102,32 +128,33 @@ body
   margin-bottom: 20px
   &__info
     padding: 10px
-    p
-      color: gray
+    white-space: nowrap
+    &--overflow
+      overflow: hidden
       text-overflow: ellipsis
+      display: block
   &__price
     display: flex
     align-items: center
     font-weight: bold
   &__animation
-    width: 20px
+    width: 0
     height: 100%
     margin-left: 10px
-    visibility: hidden
+    background-color: $color_tertiary
     transition: width 2s
+    display: flex
+    justify-content: center
+    align-items: center
+    border-top-right-radius: 12px
+    border-bottom-right-radius: 12px
+    color: white
+    overflow: hidden
   &:hover
     .order-item__animation
-      display: flex
-      justify-content: center
-      align-items: center
-      background-color: $color_tertiary
-      border-top-right-radius: 12px
-      border-bottom-right-radius: 12px
-      color: white
-      visibility: visible
       width: 50px
       i
-        animation: rotate 1s linear
+        animation: rotate 2s
 
 @keyframes rotate
   100%
@@ -156,7 +183,7 @@ body
 
 .button-1
   background: linear-gradient($color_secondary, $color_primary)
-  padding: 12px
+  padding: 12px 30px 12px 30px
   border: none
   border-radius: 20px
   color: white
@@ -201,7 +228,7 @@ span.number
   -webkit-box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.09)
   box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.09)
 
-.operation a:hover, .food__item:hover, footer a:hover
+.operation a:hover, footer a:hover
   color: $color_primary
   box-shadow: none
 
@@ -221,6 +248,10 @@ span.number
     color: black
     b
       display: block
+    &:hover
+      box-shadow: none
+      p
+        color: $color_primary
     &__img
       border-top-left-radius: 15px
       border-top-right-radius: 15px
@@ -239,8 +270,19 @@ span.number
       padding: 15px
       display: flex
       justify-content: space-between
-    &__like i
-      padding-top: 10px
+      &__like
+        padding-top: 10px
+        i
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          display: initial
+          -webkit-text-stroke-width: 1px
+          -webkit-text-stroke-color: black
+          transition: all 2s
+        &:hover
+          i
+            background-color: $color_secondary
+            -webkit-text-stroke-color: $color_secondary
     &__img1
       background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg')
     &__img2
@@ -278,6 +320,18 @@ span.number
   body
     max-width: 1200px
     margin: auto
+
+  .header
+    &__back
+      position: initial
+      margin-top: 30px
+      font-size: 30px
+    &__logo
+      width: 30%
+    &__image
+      width: 100%
+      height: 300px
+      object-fit: cover
 
   .operation
     &__items
