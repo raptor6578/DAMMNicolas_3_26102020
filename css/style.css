@@ -151,6 +151,10 @@ body {
 .order-item__info {
   padding: 10px;
   white-space: nowrap;
+  color: gray;
+}
+.order-item__info h3 {
+  color: black;
 }
 .order-item__info--overflow {
   overflow: hidden;
