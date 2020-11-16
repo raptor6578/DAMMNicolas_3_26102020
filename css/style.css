@@ -10,7 +10,7 @@ body {
 }
 
 .spinner {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: white;
@@ -72,6 +72,9 @@ body {
 }
 .header__image {
   margin-top: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
 }
 
 .main-container {
@@ -232,7 +235,9 @@ body {
 }
 .button-1:hover {
   cursor: pointer;
-  box-shadow: none;
+  opacity: 0.9;
+  -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.15);
 }
 
 .operation {
@@ -275,7 +280,6 @@ span.number {
 
 .operation a:hover, footer a:hover {
   color: #9356DC;
-  box-shadow: none;
 }
 
 .food {
@@ -395,11 +399,6 @@ span.number {
   }
   .header__logo {
     width: 30%;
-  }
-  .header__image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
   }
 
   .operation__items {
